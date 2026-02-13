@@ -5,7 +5,7 @@ public class Diccionario {
         HashMap<String, String> diccionario = new HashMap<>();
 
         // Adding elements
-        // Modified: first spanis second english
+        // Modified: first spanish second english
         diccionario.put("Manzana", "Apple");
         diccionario.put("Naranja", "Orange");
         diccionario.put("Fresa", "Strawberry");
@@ -44,6 +44,21 @@ public class Diccionario {
         System.out.println("Traduce las siguientes palabras al inglés:\n");
 
         // Ask 5 words
+        for (int i = 0; i < 5; i++) {
+            String palabraEspañol = palabras.get(i);
+            System.out.print(palabraEspañol + ": ");
+            String respuesta = scanner.nextLine();
 
+            if (respuesta.equalsIgnoreCase(diccionario.get(palabraEspañol))) {
+                System.out.println("Correcto :D\n");
+                correctas++;
+            } else {
+                System.out.println("Incorrecto :(. La respuesta correcta era: "
+                        + diccionario.get(palabraEspañol) + "\n");
+            }
+        }
+
+        System.out.println("Resultado final: " + correctas + " / 5 correctas");
+        scanner.close();
     }
 }
