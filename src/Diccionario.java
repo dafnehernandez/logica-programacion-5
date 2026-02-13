@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Diccionario {
     public static void main(String[]args){
@@ -36,9 +33,17 @@ public class Diccionario {
         diccionario.put("Trabajo", "Job");
         diccionario.put("Salario", "Salary");
 
-        // We convert the words into a list
+        // Convert the words into a list
         List<String> palabras = new ArrayList<>(diccionario.keySet());
         Collections.shuffle(palabras); // Mix words using function suffle
+
+        // Read from user
+        Scanner scanner = new Scanner(System.in);
+        int correctas = 0; //to check how many responses are correct
+
+        System.out.println("Traduce las siguientes palabras al inglés:\n");
+
+        // Ask 5 words
 
     }
 }
