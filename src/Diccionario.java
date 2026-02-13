@@ -1,39 +1,44 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
 public class Diccionario {
     public static void main(String[]args){
         HashMap<String, String> diccionario = new HashMap<>();
 
         // Adding elements
-        diccionario.put("Apple", "Manzana");
-        diccionario.put("Orange", "Naranja");
-        diccionario.put("Strawberry", "Fresa");
+        // Modified: first spanis second english
+        diccionario.put("Manzana", "Apple");
+        diccionario.put("Naranja", "Orange");
+        diccionario.put("Fresa", "Strawberry");
 
-        diccionario.put("Love", "Amor");
-        diccionario.put("Friendship", "Amistad");
-        diccionario.put("Mix", "Mezclar");
+        diccionario.put("Amor", "Love");
+        diccionario.put("Amistad", "Friendship");
+        diccionario.put("Mezclar", "Mix");
 
-        diccionario.put("Travel", "Viajar");
-        diccionario.put("Drink", "Beber");
-        diccionario.put("Eat", "Comer");
+        diccionario.put("Viajar", "Travel");
+        diccionario.put("Beber", "Drink");
+        diccionario.put("Comer", "Eat");
 
-        diccionario.put("Spread", "Untar");
-        diccionario.put("Sprinkle", "Espolvorear");
-        diccionario.put("Cut", "Cortar");
+        diccionario.put("Untar", "Spread");
+        diccionario.put("Espolvorear", "Sprinkle");
+        diccionario.put("Cortar", "Cut");
 
-        diccionario.put("Damage", "Dañar");
-        diccionario.put("Hit", "Golpear");
-        diccionario.put("Heal", "Sanar");
+        diccionario.put("Dañar", "Damage");
+        diccionario.put("Golpear", "Hit");
+        diccionario.put("Sanar", "Heal");
 
-        diccionario.put("Mystery", "Misterio");
-        diccionario.put("Case", "Caso");
-        diccionario.put("Clue", "Pista");
+        diccionario.put("Misterio", "Mystery");
+        diccionario.put("Caso", "Case");
+        diccionario.put("Pista", "Clue");
 
-        diccionario.put("Job", "Trabajo");
-        diccionario.put("Salary", "Salario");
+        diccionario.put("Trabajo", "Job");
+        diccionario.put("Salario", "Salary");
 
-        String traduccion;
+        // We convert the words into a list
+        List<String> palabras = new ArrayList<>(diccionario.keySet());
+        Collections.shuffle(palabras); // Mix words using function suffle
 
     }
-
 }
